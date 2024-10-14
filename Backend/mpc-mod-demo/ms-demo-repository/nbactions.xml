@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+    <action>        
+        <actionName>CUSTOM-Clean and Build project without test</actionName>        
+        <displayName>Clean and Build project without test</displayName>        
+        <goals>            
+            <goal>clean</goal>            
+            <goal>install</goal>            
+            <goal>-DskipTests</goal>                        
+        </goals>    
+    </action>
+    <action>
+            <actionName>CUSTOM-Forzar</actionName>
+            <displayName>Forzar</displayName>
+            <goals>
+                <goal>clean</goal>
+                <goal>install</goal>
+                <goal>-U</goal>
+            </goals>
+        </action>
+</actions>

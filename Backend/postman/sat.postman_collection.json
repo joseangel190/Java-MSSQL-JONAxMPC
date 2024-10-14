@@ -1,0 +1,518 @@
+{
+	"info": {
+		"_postman_id": "338fec22-0c2c-49df-ba20-9eed30268188",
+		"name": "sat",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "24928199"
+	},
+	"item": [
+		{
+			"name": "mantenimiento",
+			"item": [
+				{
+					"name": "save",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJlWF9lb25xMWJ1bFNTYlFJVEVTUGRVLURWVXdHWUJqMkM3aUY2YzNoWjZ3In0.eyJleHAiOjE3MjgxOTA3OTAsImlhdCI6MTcyODE4OTI5MCwianRpIjoiOWE0YThkZmItY2M3Yy00MGZlLTk0ZTQtZGMwMmNlNmQyYzQ0IiwiaXNzIjoiaHR0cDovLzE5Mi4xNjguMS40MTozNjkwL3JlYWxtcy9jYXRhc3RybyIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiJlOWYwMGQzNi1mMjg1LTQ5MjUtYmFmZi0xNjk5MGIyYzU4YzIiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJ3ZWJfYXBwX2NhdGFzdHJvIiwic2Vzc2lvbl9zdGF0ZSI6IjJiN2ZiMDk0LWY5YTAtNDk4NS1iMmFjLTIxMzMyZTY0NDc4YSIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiKiJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsiZGVmYXVsdC1yb2xlcy1jYXRhc3RybyIsIkFkbWluaXN0cmFkb3JlcyIsIm9mZmxpbmVfYWNjZXNzIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6InByb2ZpbGUgd2ViX2NhdGFzdHJvX2FwaV9yZXBvcnRlcyBlbWFpbCB3ZWJfY2F0YXN0cm9fYXBpX21hbnRlbmltaWVudG9zIiwic2lkIjoiMmI3ZmIwOTQtZjlhMC00OTg1LWIyYWMtMjEzMzJlNjQ0NzhhIiwiY2xpZW50SWQiOiIzMTdiMTU3NC05NDg1LTQ4MTYtYmY4Mi01YmEyOGM3Y2UwNzIiLCJyZWFsbWlkIjoiMDBmNGM4ZWItY2Q1OC00NzU4LTgxNzUtOTgxYmUzYWZmZjMzIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImlkU2lzdGVtYSI6MSwiY2xpZW50TmFtZSI6IndlYl9hcHBfY2F0YXN0cm8iLCJyZWFsbU5hbWUiOiJjYXRhc3RybyIsInByZWZlcnJlZF91c2VybmFtZSI6ImpvZnJhbnRvYmEiLCJsb2NhbGUiOiJlcyIsImdpdmVuX25hbWUiOiJKb25hdGhhbiIsImlkQ2xpZW50ZSI6NywibmFtZSI6IkpvbmF0aGFuIFRvcnJlcyIsImZhbWlseV9uYW1lIjoiVG9ycmVzIiwiZW1haWwiOiJjaGVzY290MjMwMkBnbWFpbC5jb20ifQ.WvmieLWLJBvznZWkknzlgzRHI5SQxDTIAq6qI-E6WyMJQUyGhP8ndvhLBH_FkAqm15C7uPYBcpodL8waTnpNHBpjFoCX8AsPGSuYx-Pzhe01RWdGYlLSCZVWV7dONCCnTiEoM3nhsK0kJjrohaD6J7C5lNwmFQ-IQMsE9hDjv_SP68qn0T5l9MbAqlxDlnC9J5kJXTqFqqbmgaUnNjHQFOEdd8THov7sJ0Z93UjrG7sVzTAeIjKucGA6dvuBnbpcmM7cB1jwRZFTksJpjqvGBdciFqW-BuLmoltGkrvY6oEvnRQjB-8R4aKe_995wo2c5Ne2gq3P1tO_s4m7Ln0Kvw"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"descripcion\": \"save postman\",\r\n    \"abreviatura\": \"postman\",\r\n    \"orden\": 2,\r\n    \"version\": 1,\r\n    \"codigo\": \"pstmn\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8090/api/mantenimientos/parametrias/saveProcedure",
+						"description": "Permite registrar un distrito.\n\nLa siguiente tabla describe los atributos que el JSON de la llamada requiere.\n\n| **Atributos** | **Requerido** | **Descripcion** |\n| --- | --- | --- |\n| **descripcion  <br>**_string_ | required | Descripcion del distrito |\n| **codigoDistrito  <br>**_string_ | required | Codigo del distrito |\n| **orden  <br>**_integer_ | opcional | Orden del distrito |\n| **provincia.id  <br>**integer | required | Identificador de la provincia que pertenece el distrito. |"
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 4,\r\n    \"descripcion\": \"prueba update\",\r\n    \"abreviatura\": \"upt\",\r\n    \"orden\": 3,\r\n    \"version\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:9001/api/mantenimientos/parametrias/updateProcedure",
+						"description": "Permite registrar un distrito.\n\nLa siguiente tabla describe los atributos que el JSON de la llamada requiere.\n\n| **Atributos** | **Requerido** | **Descripcion** |\n| --- | --- | --- |\n| **descripcion  <br>**_string_ | required | Descripcion del distrito |\n| **codigoDistrito  <br>**_string_ | required | Codigo del distrito |\n| **orden  <br>**_integer_ | opcional | Orden del distrito |\n| **provincia.id  <br>**integer | required | Identificador de la provincia que pertenece el distrito. |"
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 4,\r\n    \"descripcion\": \"prueba\",\r\n    \"abreviatura\": \"upt\",\r\n    \"orden\": 1,\r\n    \"version\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:9001/api/mantenimientos/parametrias/deleteProcedure",
+						"description": "Permite registrar un distrito.\n\nLa siguiente tabla describe los atributos que el JSON de la llamada requiere.\n\n| **Atributos** | **Requerido** | **Descripcion** |\n| --- | --- | --- |\n| **descripcion  <br>**_string_ | required | Descripcion del distrito |\n| **codigoDistrito  <br>**_string_ | required | Codigo del distrito |\n| **orden  <br>**_integer_ | opcional | Orden del distrito |\n| **provincia.id  <br>**integer | required | Identificador de la provincia que pertenece el distrito. |"
+					},
+					"response": []
+				},
+				{
+					"name": "listar",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"descripcion\": \"prueba\",\r\n    \"abreviatura\": \"upt\",\r\n    \"orden\": 1,\r\n    \"version\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:9001/api/mantenimientos/parametrias/listar/all",
+						"description": "Permite registrar un distrito.\n\nLa siguiente tabla describe los atributos que el JSON de la llamada requiere.\n\n| **Atributos** | **Requerido** | **Descripcion** |\n| --- | --- | --- |\n| **descripcion  <br>**_string_ | required | Descripcion del distrito |\n| **codigoDistrito  <br>**_string_ | required | Codigo del distrito |\n| **orden  <br>**_integer_ | opcional | Orden del distrito |\n| **provincia.id  <br>**integer | required | Identificador de la provincia que pertenece el distrito. |"
+					},
+					"response": []
+				},
+				{
+					"name": "listarPaginacion",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"descripcion\": \"prueba\",\r\n    \"abreviatura\": \"upt\",\r\n    \"orden\": 1,\r\n    \"version\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9001/api/mantenimientos/parametrias/listar/paginacion?limit=2&offSet=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"api",
+								"mantenimientos",
+								"parametrias",
+								"listar",
+								"paginacion"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "2"
+								},
+								{
+									"key": "offSet",
+									"value": "1"
+								}
+							]
+						},
+						"description": "Permite registrar un distrito.\n\nLa siguiente tabla describe los atributos que el JSON de la llamada requiere.\n\n| **Atributos** | **Requerido** | **Descripcion** |\n| --- | --- | --- |\n| **descripcion  <br>**_string_ | required | Descripcion del distrito |\n| **codigoDistrito  <br>**_string_ | required | Codigo del distrito |\n| **orden  <br>**_integer_ | opcional | Orden del distrito |\n| **provincia.id  <br>**integer | required | Identificador de la provincia que pertenece el distrito. |"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "reportes",
+			"item": [
+				{
+					"name": "reportEcho",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:9002/api/reportes/echo/pdf"
+					},
+					"response": []
+				},
+				{
+					"name": "reportParametria",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{access_token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:9002/api/reportes/parametria/pdf"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "api-auth",
+			"item": [
+				{
+					"name": "postLogin",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "Cookie",
+								"value": "AUTH_SESSION_ID=17d63577-b8b6-4f54-9ac7-6ca7d86e42c3.mz-auth-48814; AUTH_SESSION_ID_LEGACY=17d63577-b8b6-4f54-9ac7-6ca7d86e42c3.mz-auth-48814; KEYCLOAK_LOCALE=es"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "client_id",
+									"value": "web_app_catastro",
+									"type": "text"
+								},
+								{
+									"key": "client_secret",
+									"value": "47toSiQusxCTWs58EFmujBAWjrmxxTaM",
+									"type": "text"
+								},
+								{
+									"key": "grant_type",
+									"value": "password",
+									"type": "text"
+								},
+								{
+									"key": "scope",
+									"value": "profile email roles web_catastro_api_mantenimientos web_catastro_api_reportes",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "chescot2302@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "filosofo",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://192.168.1.41:3690/realms/catastro/protocol/openid-connect/token"
+					},
+					"response": []
+				},
+				{
+					"name": "postLoginDevel",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "Cookie",
+								"value": "AUTH_SESSION_ID=17d63577-b8b6-4f54-9ac7-6ca7d86e42c3.mz-auth-48814; AUTH_SESSION_ID_LEGACY=17d63577-b8b6-4f54-9ac7-6ca7d86e42c3.mz-auth-48814; KEYCLOAK_LOCALE=es"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "client_id",
+									"value": "{{client_id}}",
+									"type": "text"
+								},
+								{
+									"key": "client_secret",
+									"value": "{{client_secret}}",
+									"type": "text"
+								},
+								{
+									"key": "grant_type",
+									"value": "password",
+									"type": "text"
+								},
+								{
+									"key": "scope",
+									"value": "profile email roles web_catastro_api_mantenimientos web_catastro_api_reportes",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "chescot2302@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "filosofo",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://localhost:3690/realms/catastro/protocol/openid-connect/token"
+					},
+					"response": []
+				},
+				{
+					"name": "getLogin",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": "AUTH_SESSION_ID=17d63577-b8b6-4f54-9ac7-6ca7d86e42c3.mz-auth-48814; AUTH_SESSION_ID_LEGACY=17d63577-b8b6-4f54-9ac7-6ca7d86e42c3.mz-auth-48814; KEYCLOAK_LOCALE=es"
+							}
+						],
+						"url": {
+							"raw": "https://auth-test.icl.gob.pe:8443/realms/catastro/protocol/openid-connect/auth?client_id=web_app_catastro&redirect_uri=https%3A%2F%2Fide.icl.gob.pe&response_type=code&scope=openid%20profile%20email%20web_catastro_api_mantenimientos%20web_catastro_api_reportes",
+							"protocol": "https",
+							"host": [
+								"auth-test",
+								"icl",
+								"gob",
+								"pe"
+							],
+							"port": "8443",
+							"path": [
+								"realms",
+								"catastro",
+								"protocol",
+								"openid-connect",
+								"auth"
+							],
+							"query": [
+								{
+									"key": "client_id",
+									"value": "web_app_catastro"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "https%3A%2F%2Fide.icl.gob.pe"
+								},
+								{
+									"key": "response_type",
+									"value": "code"
+								},
+								{
+									"key": "scope",
+									"value": "openid%20profile%20email%20web_catastro_api_mantenimientos%20web_catastro_api_reportes"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "request_access_token",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "Cookie",
+								"value": "AUTH_SESSION_ID=17d63577-b8b6-4f54-9ac7-6ca7d86e42c3.mz-auth-48814; AUTH_SESSION_ID_LEGACY=17d63577-b8b6-4f54-9ac7-6ca7d86e42c3.mz-auth-48814; KEYCLOAK_LOCALE=es"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "grant_type",
+									"value": "authorization_code",
+									"type": "text"
+								},
+								{
+									"key": "client_id",
+									"value": "{{client_id}}",
+									"type": "text"
+								},
+								{
+									"key": "client_secret",
+									"value": "{{client_secret}}",
+									"type": "text"
+								},
+								{
+									"key": "code",
+									"value": "9a0e8c47-0ef9-4df1-a212-8eb0c07deab1.85480f0a-cc47-4927-8102-af617cb8d377.317b1574-9485-4816-bf82-5ba28c7ce072",
+									"type": "text"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "{{uri_keycloak_redirect}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://192.168.1.38:3690/realms/catastro/protocol/openid-connect/token"
+					},
+					"response": []
+				},
+				{
+					"name": "request_refresh_access_token",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "Cookie",
+								"value": "AUTH_SESSION_ID=17d63577-b8b6-4f54-9ac7-6ca7d86e42c3.mz-auth-48814; AUTH_SESSION_ID_LEGACY=17d63577-b8b6-4f54-9ac7-6ca7d86e42c3.mz-auth-48814; KEYCLOAK_LOCALE=es"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "grant_type",
+									"value": "refresh_token",
+									"type": "text"
+								},
+								{
+									"key": "client_id",
+									"value": "{{client_id}}",
+									"type": "text"
+								},
+								{
+									"key": "client_secret",
+									"value": "{{client_secret}}",
+									"type": "text"
+								},
+								{
+									"key": "refresh_token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICIxYjZlZTkxZC1mMzNlLTQ4MGUtYmUyMy1jMjRiZDU3MzVkOWYifQ.eyJleHAiOjE3MDgxMTA4ODgsImlhdCI6MTcwODEwOTA4OCwianRpIjoiZGI3MGU0ZjktZDM1ZC00ZDU3LTlkYjUtOGMxZGUzYjc5ZDIwIiwiaXNzIjoiaHR0cHM6Ly9hdXRoLXRlc3QuaWNsLmdvYi5wZTo4NDQzL3JlYWxtcy9jYXRhc3RybyIsImF1ZCI6Imh0dHBzOi8vYXV0aC10ZXN0LmljbC5nb2IucGU6ODQ0My9yZWFsbXMvY2F0YXN0cm8iLCJzdWIiOiJlOWYwMGQzNi1mMjg1LTQ5MjUtYmFmZi0xNjk5MGIyYzU4YzIiLCJ0eXAiOiJSZWZyZXNoIiwiYXpwIjoid2ViX2FwcF9jYXRhc3RybyIsInNlc3Npb25fc3RhdGUiOiJjZTdkYzcyMC0yZjI5LTQ2ODAtOWEyZS0yZWQyYTc5ZjQyMTAiLCJzY29wZSI6InByb2ZpbGUgd2ViX2NhdGFzdHJvX2FwaV9yZXBvcnRlcyBlbWFpbCB3ZWJfY2F0YXN0cm9fYXBpX21hbnRlbmltaWVudG9zIiwic2lkIjoiY2U3ZGM3MjAtMmYyOS00NjgwLTlhMmUtMmVkMmE3OWY0MjEwIn0.HiLJlodwdowMzsjkY0zqRU7HBbMA6lZjWMyw2dZRfl4",
+									"type": "text"
+								}
+							]
+						},
+						"url": "https://auth-test.icl.gob.pe:8443/realms/catastro/protocol/openid-connect/token"
+					},
+					"response": []
+				},
+				{
+					"name": "Post logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{access_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "redirect_uri",
+									"value": "https://ide.icl.gob.pe",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://192.168.1.38:3690/realms/catastro/protocol/openid-connect/logout"
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": {}
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "client_id",
+			"value": "web_app_catastro",
+			"type": "string"
+		},
+		{
+			"key": "client_secret",
+			"value": "47toSiQusxCTWs58EFmujBAWjrmxxTaM",
+			"type": "string"
+		}
+	]
+}

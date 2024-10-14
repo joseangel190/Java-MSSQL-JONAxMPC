@@ -1,0 +1,1 @@
+start "" "C:\Program Files\NetBeans-17\netbeans\bin\netbeans64.exe" --userdir "C:\github\Java-MSSQL-JONAxMPC\Backend\workspace"

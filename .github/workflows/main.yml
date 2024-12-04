@@ -29,4 +29,4 @@ jobs:
         cd ${{ github.workspace }}/Backend/jofrantoba-parent-pom
         mvn clean install
         cd ${{ github.workspace }}/Backend/mpc-mod-demo/configserver
-        mvn spring-boot:run
+        mvn spring-boot:run -e

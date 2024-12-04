@@ -1,0 +1,30 @@
+name: Deploy Spring Config Server
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Java
+      uses: actions/setup-java@v3
+      with:
+        distribution: 'temurin'
+        java-version: '17'
+
+    - name: Build and Run Application
+      env:
+        GIT_USERNAME: ${{ secrets.GIT_USERNAME }}
+        GIT_PASSWORD: ${{ secrets.GIT_PASSWORD }}
+      run: |
+        cd ${{ github.workspace }}/Backend/jofrantoba-parent-pom
+        mvn clean install
+        cd ${{ github.workspace }}/Backend/mpc-mod-demo/configserver
+        mvn mvn spring-boot:run

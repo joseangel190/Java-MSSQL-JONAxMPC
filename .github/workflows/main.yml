@@ -1,6 +1,7 @@
 name: Deploy Spring Config Server
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
@@ -23,6 +24,7 @@ jobs:
       env:
         GIT_USERNAME: ${{ secrets.GIT_USERNAME }}
         GIT_PASSWORD: ${{ secrets.GIT_PASSWORD }}
+        GIT_URL: ${{ secrets.GIT_URL }}
       run: |
         cd ${{ github.workspace }}/Backend/jofrantoba-parent-pom
         mvn clean install

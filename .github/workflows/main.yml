@@ -25,6 +25,7 @@ jobs:
         GIT_USERNAME: ${{ secrets.GIT_USERNAME }}
         GIT_PASSWORD: ${{ secrets.GIT_PASSWORD }}
         GIT_URL: ${{ secrets.GIT_URL }}
+        GIT_HOME: ${{ github.workspace }}
       run: |
         cd ${{ github.workspace }}/Backend/jofrantoba-parent-pom
         mvn clean install
